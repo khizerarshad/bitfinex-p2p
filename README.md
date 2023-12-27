@@ -66,6 +66,41 @@ Notes
     For a full-fledged system, consider implementing sophisticated order matching, error handling, and network resilience mechanisms.
     The system does not include a locking mechanism for order processing atomicity. Orders are processed independently by each node.
 
-Due to less time I was not able to implement Orderbook, so you can find the logic in orderbook.js
+Due to less time I was not able to implement Orderbook, so you can find the logic in orderbook.js.
+
+
+**Accomplishments:**
+
+**1. Peer Node Implementation:**
+   - A Peer Node has been successfully implemented to handle orders.
+   - Orders submitted by clients are distributed among Peer Nodes using Grenache.
+
+**2. Lock Service:**
+   - A basic Lock Service has been integrated to manage locks. However, it's crashing so the code is there but it is excluded from the peer-node.js
+
+**3. Testing:**
+   - Basic testing has been conducted, including order submission and distribution.
+
+**Pending Items:**
+
+**1. Order Matching:**
+   - Detailed order matching logic needs to be implemented. The current code handles order distribution, but specifics on matching and processing remain pending. However, I have added the order-matching algorithm in the zip file as well. 
+
+**2. Concurrency and Race Conditions:**
+   - The challenge mentions being cautious about race conditions. Further evaluation and potential enhancements are required to ensure the system handles concurrency effectively.
+
+**3. Comprehensive Testing:**
+   - While basic testing has been conducted, a more comprehensive set of tests is needed to cover various scenarios, potential matches, and the behavior of the lock service.
+
+** Potential Improvements with Additional Time:**
+
+**1. Enhanced Order Matching Algorithm:**
+   - Given more time, an enhanced order-matching algorithm could be developed to optimize trade execution.
+
+**2. Scalability Considerations:**
+   - Evaluate and implement measures for scalability, especially in scenarios with a high volume of orders.
+
+**3. Logging and Monitoring:**
+   - Implement robust logging and monitoring mechanisms to facilitate debugging and system performance analysis.
 
 
